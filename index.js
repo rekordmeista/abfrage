@@ -214,15 +214,15 @@ app.post('/api/get-data', function (req, res) {
       });
     }
 
-    tvShowsArr = _.take(_.shuffle(_.compact(_.uniq(tvShowsArr))), 2500);
-    moviesArr = _.take(_.shuffle(_.compact(_.uniq(moviesArr))), 2500);
-    movieGenresArr = _.take(_.shuffle(_.compact(_.uniq(movieGenresArr))), 2500);
-    musiciansArr = _.take(_.shuffle(_.compact(_.uniq(musiciansArr))), 2500);
-    albumsArr = _.take(_.shuffle(_.compact(_.uniq(albumsArr))), 2500);
-    songsArr = _.take(_.shuffle(_.compact(_.uniq(songsArr))), 2500);
-    musicPlaylistsArr = _.take(_.shuffle(_.compact(_.uniq(musicPlaylistsArr))), 2500);
-    videoPlaylistsArr = _.take(_.shuffle(_.compact(_.uniq(videoPlaylistsArr))), 2500);
-    addonsArr = _.take(_.shuffle(_.compact(_.uniq(addonsArr))), 2500);
+    tvShowsArr = _.take(_.shuffle(_.compact(_.uniq(tvShowsArr))), 50000);
+    moviesArr = _.take(_.shuffle(_.compact(_.uniq(moviesArr))), 50000);
+    movieGenresArr = _.take(_.shuffle(_.compact(_.uniq(movieGenresArr))), 50000);
+    musiciansArr = _.take(_.shuffle(_.compact(_.uniq(musiciansArr))), 50000);
+    albumsArr = _.take(_.shuffle(_.compact(_.uniq(albumsArr))), 50000);
+    songsArr = _.take(_.shuffle(_.compact(_.uniq(songsArr))), 50000);
+    musicPlaylistsArr = _.take(_.shuffle(_.compact(_.uniq(musicPlaylistsArr))), 50000);
+    videoPlaylistsArr = _.take(_.shuffle(_.compact(_.uniq(videoPlaylistsArr))), 50000);
+    addonsArr = _.take(_.shuffle(_.compact(_.uniq(addonsArr))), 50000);
     res.send({'tvshows': tvShowsArr, 'movies': moviesArr, 'moviegenres': movieGenresArr, 'musicians': musiciansArr, 'albums': albumsArr, 'songs': songsArr, 'musicplaylists': musicPlaylistsArr, 'videoplaylists': videoPlaylistsArr, 'addons': addonsArr});
   })).catch(function(err) {
     console.log(err);
